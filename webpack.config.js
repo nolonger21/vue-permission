@@ -11,16 +11,4 @@ module.exports = {
     filename: 'vue-permission.js',
     library: 'vuePermission',
   },
-  target:
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [
-          resolve('lib'),
-        ],
-      },
-    ]
-  }
 };
