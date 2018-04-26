@@ -38,6 +38,8 @@ Vue.permission.authorize({'create': true, 'del': false});
 
 Vue.permission.hasPermission('del'); // console.log(false);
 
+Vue.permission.god = true; // all permissions return true
+
 // if u don't has permission the button will not show. and style display none.
 <button v-permission='create'></button>
 ````
