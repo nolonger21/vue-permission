@@ -69,11 +69,10 @@ var vuePermission =
 /***/ (function(module, exports, __webpack_require__) {
 
 (function () {
+  "use strict";
 
   function VuePermission() {
-    // permission is hash able object.
-    this.permissions = {};
-    this.god = false;
+    this.reset();
   };
 
   VuePermission.prototype.hasPermission = function(permission) {
@@ -81,6 +80,12 @@ var vuePermission =
       return true;
     }
     return this.permissions.hasOwnProperty(permission);
+  };
+
+  VuePermission.prototype.reset = function() {
+    // permission is hash able object.
+    this.permissions = {};
+    this.god = false;
   };
 
   VuePermission.prototype.authorize = function(permissions) {
